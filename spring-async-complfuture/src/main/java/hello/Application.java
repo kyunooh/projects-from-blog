@@ -32,7 +32,7 @@ public class Application implements CommandLineRunner {
         //}
 
         //wait until all they are completed.
-        CompletableFuture.allOf(page1,page2,page3);
+        CompletableFuture.allOf(page1,page2,page3).join();
         //I could join as well if interested.
 
         // Print results, including elapsed time
